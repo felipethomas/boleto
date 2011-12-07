@@ -3,7 +3,7 @@
     <wb-module deploy-name="abcd">
         <wb-resource deploy-path="/" source-path="/WebContent"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
-        <property name="context-root" value="abcd"/>
         <property name="java-output-path" value="/abcd/build/classes"/>
+        <property name="context-root" value="boleto"/>
     </wb-module>
 </project-modules>
