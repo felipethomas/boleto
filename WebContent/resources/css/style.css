@@ -1,0 +1,47 @@
+#header {
+	background:#7F99BE url(../images/layout-browser-hd-bg.gif) repeat-x center;
+}
+
+#header h1 {
+	font-size:16px;
+	color:#fff;
+	font-weight:normal;
+	padding:5px 10px;
+}
+
+#details-panel p {
+	padding:10px 10px 0;
+}
+
+#details-panel .details-info {
+	margin:15px;
+	padding:15px;
+	border:1px dotted #999;
+	color:#555;
+	background:#f9f9f9;
+}
+
+.feed-list {
+    padding: 0 3px 0 3px;
+}
+
+.feed-list-item {
+    margin-top: 3px;
+    padding-left: 20px;
+    font-size: 11px;
+    line-height: 20px;
+    cursor: pointer;
+    background: url(../images/rss.gif) no-repeat 0 2px;
+    border: 1px solid #fff;
+}
+
+.feed-list .x-item-selected {
+    font-weight: bold; 
+    color: #15428B;
+    background-color: #DFE8F6;
+    border: 1px dotted #A3BAE9;
+}
+
+.feed-list-item-hover {
+    background-color: #eee;
+}

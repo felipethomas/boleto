@@ -9,25 +9,47 @@
  *
  * @author Felipe Andrade
  */
-Ext.Loader.setConfig({
-	enabled : true
-});
 
+Ext.Loader.setPath('Boleto', 'app');
+
+Ext.require([
+	'Ext.container.Viewport',
+	'Ext.layout.container.Border',
+	'Ext.layout.container.Accordion',
+	'Ext.panel.Panel',
+	'Ext.Component',
+	'Ext.view.View',
+	'Ext.data.Store',
+	'Ext.selection.Model',
+	'Boleto.view.Cabecalho',
+	'Boleto.view.Opcao',
+	'Boleto.view.Detalhe',
+	'Boleto.view.Conteudo',
+	'Boleto.view.Oeste'
+]);
+		
 Ext.application({
 	name : 'Boleto',
 
 	appFolder : 'app',
+	
+	controllers: [
+        'Opcoes'
+    ],
 
 	launch : function() {
 		Ext.BLANK_IMAGE_URL = 'resources/images/s.gif';
-
-		Ext.create('Ext.container.Viewport', {
-			layout : 'fit',
+		
+		Ext.create('Ext.Viewport', {
+			layout : 'border',
 			items : [{
-				xtype : 'panel',
-				title : 'Users',
-				html : 'List of users will go here'
-			}]
+				xtype : 'cabecalho',
+			}, {
+				xtype : 'oeste'
+			}, {
+				xtype : 'conteudo'
+			}],
+			renderTo : Ext.getBody()
 		});
 	}
 });
