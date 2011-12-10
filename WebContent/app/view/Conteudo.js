@@ -3,7 +3,7 @@ Ext.define('Boleto.view.Conteudo', {
 	alias : 'widget.conteudo',
 
 	id : 'content-panel',
-	title : 'Conteudo',
+	title : 'Visualiza&ccedil;&atilde;o do Menu',
 	region : 'center',
 	margins : '2 5 5 0',
 	activeItem : 0,

@@ -27,7 +27,7 @@ Ext.define('Boleto.view.Opcao', {
 		this.callParent(arguments);
 	},
 	/**
-	 * Create the DataView to be used for the feed list.
+	 * Cria o DataView para ser usado pela lista de opcoes.
 	 * @private
 	 * @return {Ext.view.View}
 	 */
@@ -36,7 +36,6 @@ Ext.define('Boleto.view.Opcao', {
 			store : Ext.create('Ext.data.Store', {
 				model : 'Boleto.model.Opcao',
 				data : this.opcoes
-
 			}),
 			selModel : {
 				mode : 'SINGLE',
@@ -59,7 +58,7 @@ Ext.define('Boleto.view.Opcao', {
 		return this.view;
 	},
 	/**
-	 * Used when view selection changes so we can disable toolbar buttons.
+	 * Usado quando a selecao da view muda para adicionar algo na parte do conteudo.
 	 * @private
 	 */
 	onSelectionChange : function() {
@@ -67,7 +66,7 @@ Ext.define('Boleto.view.Opcao', {
 		this.lerOpcao(selecionada);
 	},
 	/**
-	 * Listens for the context menu event on the view
+	 * Listens para o evento do contexto da opcao na view.
 	 * @private
 	 */
 	onContextMenu : function(view, index, el, event) {
@@ -81,17 +80,17 @@ Ext.define('Boleto.view.Opcao', {
 		this.view.getSelectionModel().select(this.view.store.first());
 	},
 	/**
-	 * Gets the currently selected record in the view.
+	 * Retorna a opcao atual selecionada na view.
 	 * @private
-	 * @return {Ext.data.Model} Returns the selected model. false if nothing is selected.
+	 * @return {Ext.data.Model} Retorna o model selecionado. false se nao tem nada selecionado.
 	 */
 	obterOpcaoSelecionada : function() {
 		return this.view.getSelectionModel().getSelection()[0] || false;
 	},
 	/**
-	 * Loads a feed.
+	 * Faz a leitura de uma opcao.
 	 * @private
-	 * @param {Ext.data.Model} rec The feed
+	 * @param {Ext.data.Model} rec A opcao
 	 */
 	lerOpcao : function(rec) {
 		if(rec) {

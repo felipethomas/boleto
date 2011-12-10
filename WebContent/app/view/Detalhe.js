@@ -3,7 +3,7 @@ Ext.define('Boleto.view.Detalhe', {
 	alias : 'widget.detalhe',
 
 	id : 'details-panel',
-	title : 'Details',
+	title : 'Informa&ccedil;&otilde;es Adicionais',
 	region : 'center',
 	bodyStyle : 'padding-bottom:15px;background:#eee;',
 	autoScroll : true,

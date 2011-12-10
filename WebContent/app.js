@@ -15,7 +15,7 @@ Ext.Loader.setPath('Boleto', 'app');
 Ext.require([
 	'Ext.container.Viewport',
 	'Ext.layout.container.Border',
-	'Ext.layout.container.Accordion',
+	'Ext.layout.container.Fit',
 	'Ext.panel.Panel',
 	'Ext.Component',
 	'Ext.view.View',

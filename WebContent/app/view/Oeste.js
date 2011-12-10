@@ -14,13 +14,13 @@ Ext.define('Boleto.view.Oeste', {
 	items : [{
 		xtype : 'opcao',
 		opcoes : [{
-            titulo: 'Sencha Blog',
+            titulo: 'Apresenta&ccedil;&atilde;o',
             url: 'http://feeds.feedburner.com/extblog'
         }, {
-            titulo: 'Sencha Forums',
+            titulo: 'Clientes',
             url: 'http://sencha.com/forum/external.php?type=RSS2'
         }, {
-            titulo: 'Ajaxian',
+            titulo: 'Boleto',
             url: 'http://feeds.feedburner.com/ajaxian'
         }]
 	}, {
