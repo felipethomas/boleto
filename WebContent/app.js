@@ -17,6 +17,9 @@ Ext.require([
 	'Ext.layout.container.Border',
 	'Ext.layout.container.Fit',
 	'Ext.panel.Panel',
+	'Ext.form.Panel',
+	'Ext.form.FieldSet',
+	'Ext.tab.Panel',
 	'Ext.Component',
 	'Ext.view.View',
 	'Ext.data.Store',
@@ -25,7 +28,9 @@ Ext.require([
 	'Boleto.view.Opcao',
 	'Boleto.view.Detalhe',
 	'Boleto.view.Conteudo',
-	'Boleto.view.Oeste'
+	'Boleto.view.Oeste',
+	'Boleto.view.Cliente',
+	'Boleto.view.Apresentacao'
 ]);
 		
 Ext.application({

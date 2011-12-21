@@ -15,13 +15,13 @@ Ext.define('Boleto.view.Oeste', {
 		xtype : 'opcao',
 		opcoes : [{
             titulo: 'Apresenta&ccedil;&atilde;o',
-            url: 'http://feeds.feedburner.com/extblog'
+            url: 'apresentacao'
         }, {
             titulo: 'Clientes',
-            url: 'http://sencha.com/forum/external.php?type=RSS2'
+            url: 'clientes'
         }, {
             titulo: 'Boleto',
-            url: 'http://feeds.feedburner.com/ajaxian'
+            url: 'boleto'
         }]
 	}, {
 		xtype : 'detalhe'
