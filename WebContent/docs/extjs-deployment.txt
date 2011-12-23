@@ -1,0 +1,9 @@
+Sencha SDK Tools permite que voce gere um resumo de todas as dependencias JavaScript na forma de um arquivo JSB3 
+(formato de arquivo JSBuilder), e crie um build personalizado contendo somente o codigo que precisa para sua aplicacao.
+
+1. download do Sencha SDK Tools em http://www.sencha.com/products/extjs/
+2. instalar o SDK Tools
+3. pelo terminal, ir para o diretorio raiz que vai ser publicado pelo application server (webroot)
+4. start o application server junto com a aplicacao (tomcat)
+5. digite no terminal: sencha create jsb -a http://127.0.0.1:8080/boleto/index.jsp -p app.jsb3
+6. digite no terminal: sencha build -p app.jsb3 -d . (com o ponto)
