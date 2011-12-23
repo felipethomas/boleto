@@ -1,0 +1,1 @@
+1.Ao colocar a aplicacao em producao, excluir o diretorio "src" e o arquivo "ext-debug.js" de dentro de "extjs"
