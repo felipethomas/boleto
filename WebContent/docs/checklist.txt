@@ -1,1 +1,7 @@
-1.Ao colocar a aplicacao em producao, excluir o diretorio "src" e o arquivo "ext-debug.js" de dentro de "extjs"
+Ao colocar a aplicacao em producao:
+1. excluir o diretorio "src" (extjs)
+2. excluir o arquivo "ext-debug.js"
+3. excluir o arquivo "all-classes.js"
+4. excluir o arquivo "app.js"
+5. excluir o arquivo "app.jsb3"
+6. excluir o arquivo "desenv.jsp"

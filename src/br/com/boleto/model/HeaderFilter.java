@@ -17,6 +17,7 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Parte retirado de:
  * Posted by felipegaucho on August 8, 2007 at 2:29 PM EDT
  * Expires Http header: the magic number of YSlow
  * http://weblogs.java.net/blog/felipegaucho/archive/2007/08/expires_http_he.html
@@ -28,18 +29,22 @@ public class HeaderFilter implements Filter {
 	public void destroy() {}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		Calendar calendar = new GregorianCalendar();
-		calendar.add(Calendar.DAY_OF_WEEK, 7);
-		
-		long seconds = calendar.getTimeInMillis() / 1000;
-		
-		((HttpServletResponse) response).setHeader("Cache-Control", "PUBLIC, max-age=" + seconds + ", must-revalidate");
-		((HttpServletResponse) response).setHeader("Expires", htmlExpiresDateFormat().format(calendar.getTime()));
+		processResponse((HttpServletResponse) response);
 		
 		// Continue
 		chain.doFilter(request, response);
 	}
 
+	public static void processResponse(HttpServletResponse response) {
+		Calendar calendar = new GregorianCalendar();
+		calendar.add(Calendar.DAY_OF_WEEK, 7);
+		
+		long seconds = calendar.getTimeInMillis() / 1000;
+		
+		response.setHeader("Cache-Control", "PUBLIC, max-age=" + seconds + ", must-revalidate");
+		response.setHeader("Expires", htmlExpiresDateFormat().format(calendar.getTime()));
+	}
+	
 	public static DateFormat htmlExpiresDateFormat() {
         DateFormat httpDateFormat = new SimpleDateFormat("EEE, dd MMM yyyy HH:mm:ss z", Locale.US);
         httpDateFormat.setTimeZone(TimeZone.getTimeZone("GMT"));
