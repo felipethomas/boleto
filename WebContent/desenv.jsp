@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<title>Boleto</title>
 		<meta http-equiv="description" content="Sistema para geracao de boletos">
-		<link rel="shortcut icon" href="resources/images/favicon.ico"/>
+		<link rel="shortcut icon" type="image/ico" href="resources/images/favicon.ico"/>
 
 		<!-- CSS do Ext JS 4 -->
 		<link rel="stylesheet" type="text/css" href="extjs/resources/css/ext-all.css" />
